@@ -17,17 +17,17 @@ app.register_blueprint(single_datatype_app)
 app.register_blueprint(basic_datatype_app)
 
 #log
-today = datetime.now().strftime("%Y-%m-%d")
-logging.basicConfig(filename='./log/record-'+ today + '.log', level=logging.DEBUG, encoding='utf-8', format=f'%(asctime)s %(levelname)s %(name)s %(threadName)s : %(message)s')
+# today = datetime.now().strftime("%Y-%m-%d")
+# logging.basicConfig(filename='./log/record-'+ today + '.log', level=logging.DEBUG, encoding='utf-8', format=f'%(asctime)s %(levelname)s %(name)s %(threadName)s : %(message)s')
 ## for console setting
-console = logging.StreamHandler()
-console.setLevel(logging.DEBUG)
+# console = logging.StreamHandler()
+# console.setLevel(logging.DEBUG)
 ## 設定輸出格式
-formatter = logging.Formatter('%(name)-12s: %(levelname)-8s %(message)s')
+# formatter = logging.Formatter('%(name)-12s: %(levelname)-8s %(message)s')
 ## handler 設定輸出格式
-console.setFormatter(formatter)
+# console.setFormatter(formatter)
 ## 加入 hander 到 root logger
-logging.getLogger('').addHandler(console)
+# logging.getLogger('').addHandler(console)
 
 
 @app.route("/")
