@@ -5,10 +5,13 @@ from api.single_datatype import single_datatype_app
 from api.basic_datatype import basic_datatype_app
 from datetime import datetime
 import logging
+from flask_cors import CORS
 
 app = Flask(__name__)
 app.json.ensure_ascii = False
 app.config["TEMPLATES_AUTO_RELOAD"] = True
+
+CORS(app)
 
 # blueprints
 app.register_blueprint(temperature_app)
